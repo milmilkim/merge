@@ -1,0 +1,42 @@
+/* 폰트 */
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
+@font-face {
+  font-family: 'pyeongchang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pyeongchang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2')
+    format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background;
+  @apply font-galmuri11;
+  @apply text-white;
+}
+
+a.link {
+  @apply text-point;
+  @apply underline;
+}
+
+span.point {
+  @apply text-primary;
+  @apply font-bold;
+}
+
+*,
+body {
+  box-sizing: border-box;
+}
