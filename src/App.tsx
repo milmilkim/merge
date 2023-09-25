@@ -7,36 +7,43 @@ import Event from './pages/Event';
 import Film from './pages/Film';
 import Ticket from './pages/Ticket';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <CommonLayout />,
+      children: [
+        {
+          path: '',
+          element: <Home />,
+        },
+        {
+          path: '/about',
+          element: <About />,
+        },
+        {
+          path: '/event',
+          element: <Event />,
+        },
+        {
+          path: '/film',
+          element: <Film />,
+        },
+        {
+          path: '/ticket',
+          element: <Ticket />,
+        },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <CommonLayout />,
-    children: [
-      {
-        path: '',
-        element: <Home />,
-      },
-      {
-        path: '/about',
-        element: <About />,
-      },
-      {
-        path: '/event',
-        element: <Event />,
-      },
-      {
-        path: '/film',
-        element: <Film />,
-      },
-      {
-        path: '/ticket',
-        element: <Ticket />,
-      },
-    ],
-  },
-]);
+    basename:
+    import.meta.env.MODE === 'production' ? `/project-merge` : '/',
+  }
+);
 
 function App() {
+  console.log(import.meta.env.MODE)
   return (
     <div>
       <RouterProvider router={router} />
