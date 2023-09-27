@@ -8,7 +8,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
   },
-  base: process.env.NODE_ENV === 'production' ? `https://milmilkim.github.io/project-merge/` : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
