@@ -3,13 +3,14 @@ import Header from '@/components/Home/Header';
 import Ship from '@/components/Ship';
 import { motion } from 'framer-motion';
 import Menu from '@/components/layout/Menu';
-import { useState } from 'react';
+import {useAtom} from 'jotai';
+import { isOpenAtom } from '@/atoms';
 
 const Home = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useAtom(isOpenAtom);
 
   const openMenu = () => {
-    setIsVisible(true);
+    setIsOpen(true);
   };
 
   return (
@@ -22,7 +23,7 @@ const Home = () => {
 
         <Ship />
         <MainAnimation />
-        {!isVisible && (
+        {!isOpen && (
           <motion.span
             animate={{
               opacity: [0, 1],
@@ -38,7 +39,7 @@ const Home = () => {
           </motion.span>
         )}
 
-        <Menu setIsVisible={setIsVisible} isVisible={isVisible} />
+        <Menu />
       </div>
     </>
   );

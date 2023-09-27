@@ -1,6 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { SetStateAction, useCallback } from 'react';
+import {  useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { useAtom } from 'jotai';
+import { isOpenAtom } from '@/atoms';
+
 
 const menus = [
   { name: '머지영화제 소개', path: '/about' },
@@ -8,22 +11,21 @@ const menus = [
   { name: '상영작', path: '/film' },
   { name: '티켓', path: '/ticket' },
 ];
-const Menu: React.FC<{
-  isVisible: boolean;
-  setIsVisible: React.Dispatch<SetStateAction<boolean>>;
-}> = ({ isVisible, setIsVisible }) => {
+const Menu = () => {
+  const [isOpen, setIsOpen] = useAtom(isOpenAtom);
+
   const close = useCallback(
     (e: React.MouseEvent<HTMLElement>) => {
       e.stopPropagation();
       console.log('close');
-      setIsVisible(false);
+      setIsOpen(false);
     },
-    [setIsVisible]
+    [setIsOpen]
   );
 
   return (
     <AnimatePresence>
-      {isVisible ? (
+      {isOpen ? (
         <div
           onClick={close}
           className='w-screen h-screen fixed top-0 left-0 bg-black bg-opacity-25'>

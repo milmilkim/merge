@@ -7,7 +7,7 @@ import 'swiper/css/scrollbar';
 
 import { Autoplay, Navigation } from 'swiper/modules';
 
-import Schedule from '@/assets/images/time.jpg';
+import Schedule from '@/assets/images/time.png';
 
 import films from '@/assets/ts/film';
 

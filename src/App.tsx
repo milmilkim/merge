@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import CommonLayout from './components/layout/CommonLayout';
 
 import Home from './pages/Home';
@@ -7,7 +7,7 @@ import Event from './pages/Event';
 import Film from './pages/Film';
 import Ticket from './pages/Ticket';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: '/',
