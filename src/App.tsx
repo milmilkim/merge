@@ -38,12 +38,11 @@ const router = createBrowserRouter(
   ],
   {
     basename:
-    import.meta.env.MODE === 'production' ? `/project-merge` : '/',
+    import.meta.env.MODE === 'production' ? `/project-merge/` : '/',
   }
 );
 
 function App() {
-  console.log(import.meta.env.MODE)
   return (
     <div>
       <RouterProvider router={router} />
