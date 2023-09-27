@@ -38,7 +38,7 @@ const router = createBrowserRouter(
   ],
   {
     basename:
-    import.meta.env.MODE === 'production' ? `/project-merge/` : '/',
+    import.meta.env.MODE === 'production' ? `https://milmilkim.github.io/project-merge/` : '/',
   }
 );
 
