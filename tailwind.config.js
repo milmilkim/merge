@@ -2,12 +2,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,
@@ -20,11 +15,12 @@ module.exports = {
       fontFamily: {
         galmuri11: ['galmuri11'],
         pyeongchang: ['pyeongchang'],
+        hambacksnow: ['SF_HambakSnow'],
       },
       colors: {
         background: '#0A0B26',
         point: '#D2FD50',
-        primary: '#8589FE'
+        primary: '#8589FE',
       },
     },
   },

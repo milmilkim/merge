@@ -3,16 +3,21 @@
 
 @font-face {
   font-family: 'pyeongchang';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2')
-    format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'pyeongchang';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2')
-    format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF_HambakSnow';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -20,20 +25,30 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body:has(.merge-4th) {
   @apply bg-background;
   @apply font-galmuri11;
   @apply text-white;
 }
 
-a.link {
+body:has(.merge-5th) {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(60, 109, 237, 1) 100%);
+}
+
+.merge-4th a.link {
   @apply text-point;
   @apply underline;
 }
 
-span.point {
+.merge-4th span.point {
   @apply text-primary;
   @apply font-bold;
+}
+
+.merge-5th .bubble {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(162, 232, 100, 1) 100%);
 }
 
 *,

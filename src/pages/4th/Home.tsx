@@ -1,9 +1,9 @@
-import MainAnimation from '@/components/Home/MainAnimation';
-import Header from '@/components/Home/Header';
-import Ship from '@/components/Ship';
+import MainAnimation from '@/components/4th/Home/MainAnimation';
+import Header from '@/components/4th/Home/Header';
+import Ship from '@/components/4th/Ship';
 import { motion } from 'framer-motion';
-import Menu from '@/components/layout/Menu';
-import {useAtom} from 'jotai';
+import Menu from '@/components/4th/layouts/Menu';
+import { useAtom } from 'jotai';
 import { isOpenAtom } from '@/atoms';
 
 const Home = () => {
@@ -15,10 +15,7 @@ const Home = () => {
 
   return (
     <>
-      <div
-        className='w-full flex flex-col cursor-default'
-        style={{ height: window.innerHeight }}
-        onClick={openMenu}>
+      <div className="w-full flex flex-col cursor-default" style={{ height: window.innerHeight }} onClick={openMenu}>
         <Header />
 
         <Ship />
@@ -34,7 +31,8 @@ const Home = () => {
               ease: 'linear',
               type: 'keyframes',
             }}
-            className='text-point m-auto cursor-pointer'>
+            className="text-point m-auto cursor-pointer"
+          >
             Click to continue...
           </motion.span>
         )}
